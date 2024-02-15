@@ -1,0 +1,75 @@
+<div class="pt-6">
+    <div class="px-4 sm:px-0">
+      <h3 class="text-base font-semibold leading-7 text-gray-300">Ajustes de cuenta</h3>
+    </div>
+    <h6 class="text-gray-500 mt-10 -mb-5 text-xs">PREFERENCIAS DE CUENTA</h6>
+    <div class="mt-6 border-t border-gray-500 flex flex-col sm:flex-row sm:items-center justify-between">
+      <div class="px-4 py-6">
+        <dt class="text-sm font-medium leading-6 text-gray-300">
+          Dirección de correo electrónico
+        </dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-400">
+          reeth@b3rsrk.dev
+        </dd>
+      </div>
+      <div class="px-4 py-2">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm">Cambiar</button>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between">
+        <div class="px-4">
+          <dt class="text-sm font-medium leading-6 text-gray-300">
+            Contraseña
+          </dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-400">
+            La contraseña debe tener al menos 8 caracteres
+          </dd>
+        </div>
+        <div class="px-4 py-2">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm">Cambiar</button>
+        </div>
+    </div>
+
+    <div class="mt-6 flex flex-col sm:flex-row sm:items-center justify-between">
+        <div class="px-4">
+          <dt class="text-sm font-medium leading-6 text-gray-300">
+            Idioma del contenido
+          </dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-400">
+            Muestra los contenidos en un idioma específico
+          </dd>
+        </div>
+        <div class="px-4 py-2">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm">Cambiar</button>
+        </div>
+    </div>
+
+    <h6 class="text-gray-500 mt-10 -mb-5 text-xs">PREFERENCIAS DE INTERFAZ</h6>
+    <div class="mt-6 border-t border-gray-500 flex flex-col sm:flex-row sm:items-center justify-between">
+        <div class="mt-6 px-4">
+            <dt class="text-sm font-medium leading-6 text-gray-300">
+              Tema del sistema
+            </dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-400">
+              Cambia el tema de la interfaz
+            </dd>
+          </div>
+          <div class="px-4 py-2">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm" (click)="toggleTheme()">Cambiar</button>
+        </div>
+    </div>
+
+
+
+    <h6 class="text-gray-500 mt-10 -mb-5 text-xs">ELIMINAR CUENTA</h6>
+    <div class="mt-6 border-t border-gray-500 flex flex-col sm:flex-row sm:items-center justify-end">
+      <div class="px-4 py-4">
+        <button class="text-red-500 flex items-center">
+            <i class="fas fa-trash-alt mr-2"></i> ELIMINAR CUENTA
+          </button>
+      </div>
+    </div>
+
+</div>
+  

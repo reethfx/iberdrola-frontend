@@ -9,14 +9,11 @@
         class="p-12 scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
         <router-outlet></router-outlet>
         <mat-tab-group>
-            <mat-tab  label="Cuenta">
-                <p class="text-white">tetae</p>
-            </mat-tab>
+                <mat-tab  label="Cuenta">
+                    <config-user></config-user>
+                </mat-tab>
             <mat-tab label="Perfil">
-
-            </mat-tab>
-            <mat-tab label="Accesibilidad">
-
+                <config-profile></config-profile>
             </mat-tab>
           </mat-tab-group>
       </div>
