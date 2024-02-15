@@ -1,0 +1,53 @@
+<div class="mx-auto px-4 py-4 sm:px-8 lg:container">
+<div class="flex-col rounded-lg bg-white px-8 py-8 mx-8 my-9 dark:bg-night-700 sm:flex-row">
+    <div class="mb-4 flex items-center justify-between">
+      <div class="flex-col items-center">
+        <h3 class="text-md font-bold text-gray-900 dark:text-night-50">Añadir clientes</h3>
+        <span class="text-sm text-gray-400 dark:text-night-300">Formulario de añadido</span>
+      </div>
+    </div>
+
+    <div class="relative overflow-x-auto">
+      <form class="max-w-xl mx-0">
+        
+        <div class="mb-5">
+          <label for="dni" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
+          <input type="number" name="dni" [(ngModel)]="dni" id="dni" class="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-dark-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+        </div>
+       
+        <div class="flex items-center">
+          <div class="mb-5 mr-5">
+            <label for="nombre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+            <input type="text" name="nombre" [(ngModel)]="nombre" id="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-dark-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+          </div>
+
+          <div class="mb-5">
+            <label for="apellido" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido</label>
+            <input type="text" name="apellido" [(ngModel)]="apellido" id="apellido" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-dark-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+          </div>
+        </div>
+        
+        <div class="mb-5">
+          <label for="direccion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
+          <input type="text" name="direccion" [(ngModel)]="direccion" id="direccion" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-dark-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+        </div>
+        
+        <div class="mb-5">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+          <input type="email" name="email" [(ngModel)]="email" d="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-dark-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+        </div>
+       
+        <div class="mb-5">
+          <label for="telefono" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
+          <input type="tel" name="telefono" [(ngModel)]="telefono" id="telefono" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-dark-600 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+        
+        </div>
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+              <button type="button" class="text-sm font-semibold leading-6 text-night-200 hover:text-primary-500">Cancelar</button>
+              <button type="button" (click)="saveClienteData()" class="rounded-md bg-primary-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Añadir</button>
+          </div>
+        </form>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="flex flex-wrap">
+<div  *ngFor="let contrato of contratos" class="w-3/4 mb-4 mr-4 rounded-lg bg-white px-8 py-5 my-5 mr-2 dark:bg-night-700 sm:flex-row">
+  <div class="flex-col-3 rounded-lg bg-white px-8 py-5 my-5 dark:bg-night-700 sm:flex-row">
+    <div class="mb-4 flex items-center justify-between">
+      <div class="flex-col items-center">
+        <h3 class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-200">Información del contrato</h3>
+        <span class="text-sm text-gray-400 dark:text-night-300">Clientes - Iberdrola Database</span>
+      </div>
+      <div class="mb-4 flex items-center justify-between">
+        <a class="btn btn-success mr-4 flex-none rounded-md bg-primary-500 px-4 py-2.5 text-xs font-semibold hidden  rounded-md bg-gray-500 py-1 px-3 align-middle text-sm font-medium text-white sm:block"
+        routerLink="/dashboard/contratos/edit/{{contratoData?.id}}">
+        <svg-icon src="assets/icons/heroicons/outline/edit.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+        </a>
+
+      <button (click)="deleteContract(contratoData.id)" 
+      class="flex-none rounded-md bg-red-500 px-4 py-2.5 text-xs font-semibold hidden  rounded-md bg-primary-500 py-1 px-3 align-middle text-sm font-medium text-white sm:block">
+      <svg-icon src="assets/icons/heroicons/outline/x.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+    </button>
+      </div>
+    </div>
+    <div class="mt-6 border-t border-gray-600">
+      <dl class="divide-y divide-gray-100 dark:divide-gray-700">
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900 dark:text-gray-300">DNI del cliente</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-400 sm:col-span-2 sm:mt-0">{{ contrato.dni_cliente }}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900 dark:text-gray-300">ID Contrato</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-400 sm:col-span-2 sm:mt-0">{{ contrato.id }}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900 dark:text-gray-300">Contador asociado</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-400 sm:col-span-2 sm:mt-0">{{ contrato.cups }}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900 dark:text-gray-300">Tarifa aplicada</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-400 sm:col-span-2 sm:mt-0">
+            {{ contrato?.id_tarifa === 1 ? 'PVPC' : contrato?.id_tarifa === 2 ? 'Privada' : 'Otro' }}
+          </dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900 dark:text-gray-300">Detalles del contrato</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 dark:text-gray-400 sm:col-span-2 sm:mt-0">Loren Ipsum no se que no se cuantos</dd>
+        </div>
+      </dl>
+    </div>
+</div>
+</div>

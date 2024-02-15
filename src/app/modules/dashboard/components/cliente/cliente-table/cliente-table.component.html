@@ -1,0 +1,83 @@
+<div class="mx-auto px-4 py-4 sm:px-8 lg:container">
+  <div class="mb-4 flex justify-between">
+    <div class="inline-block">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Clientes Dashboard</h3>
+        <div class="space-x-1 text-xs font-medium text-gray-400 dark:text-night-300">
+            <a href="" class="hover:text-primary-500">Iberdrola</a>
+            <span> - Contratos</span>
+        </div>
+    </div>
+</div>
+
+  <div class="flex-col rounded-lg bg-white px-8 py-5 my-5 dark:bg-night-700 sm:flex-row">
+    <div class="mb-4 flex items-center justify-between">
+      <div class="flex-col items-center">
+        <span class="text-sm text-gray-400 dark:text-night-300">Clientes - Iberdrola Database</span>
+      </div>
+      <div class="mb-4 flex items-center justify-between">
+        <a class="btn btn-success mr-4 flex-none rounded-md bg-gray-100 px-4 py-2.5 text-xs font-semibold text-gray-500 hover:bg-gray-200 dark:bg-night-600 dark:text-night-200 dark:hover:bg-night-500"
+        [routerLink]="['/dashboard/clientes/add']">
+          Añadir clientes
+        </a>
+
+      <button
+      class="flex-none rounded-md bg-primary-500 px-4 py-2.5 text-xs font-semibold hidden  rounded-md bg-primary-500 py-1 px-3 align-middle text-sm font-medium text-white sm:block">
+      Generar factura
+    </button>
+      </div>
+    </div>
+
+    <div class="relative overflow-x-auto">
+      <table class="w-full table-auto">
+        <!--Table head-->
+        <thead class="text-xs uppercase text-gray-400 dark:text-night-300">
+          <tr>
+            <th class="py-3 text-left">DNI</th>
+            <th class="py-3 text-right">Nombre</th>
+            <th class="py-3 text-right">Apellido</th>
+            <th class="py-3 text-right">Email</th>
+            <th class="py-3 text-right">Telefono</th>
+            <th class="py-3 text-right">Dirección</th>
+            <th class="py-3 text-right">Acciones</th>
+          </tr>
+        </thead>
+        <!--end Table head-->
+        <!--Table body-->
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+          <td class="py-2 pl-2">
+            <span class="text-sm font-semibold text-gray-400 dark:text-night-200">{{ cliente.dni }} </span>
+          </td>
+          <td class="py-2 pl-2 text-right">
+            <span class="text-sm font-semibold text-gray-400 dark:text-night-200">{{ cliente.nombre }} </span>
+          </td>
+          <td class="py-2 pl-2 text-right">
+            <span class="text-sm font-semibold text-gray-400 dark:text-night-200">{{ cliente.apellido }}</span>
+          </td>
+          <td class="py-2 pl-2 text-right">
+            <span class="text-sm font-semibold text-gray-400 dark:text-night-200">{{ cliente.email }} </span>
+          </td>
+          <td class="py-2 pl-2 text-right">
+            <span class="text-sm font-semibold text-gray-400 dark:text-night-200">{{ cliente.telefono }}</span>
+          </td>
+          <td class="py-2 pl-2 text-right">
+            <span class="text-sm font-semibold text-gray-400 dark:text-night-200">{{ cliente.direccion }}</span>
+          </td>
+          <td class="py-2 pl-2 text-center">
+            <div class="flex justify-end">
+              <a routerLink="/dashboard/clientes/edit/{{cliente.dni}}" class="flex mr-2 h-7 w-8 items-center justify-center rounded-md bg-gray-200 text-gray-400 dark:bg-night-500 dark:text-night-300">
+                <svg-icon src="assets/icons/heroicons/outline/edit.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+              </a>
+              <button (click)="deleteClient(cliente.dni)" class="flex h-7 w-8 items-center justify-center rounded-md bg-red-400 text-gray-200 dark:bg-red-500 dark:text-night-100">
+                <svg-icon src="assets/icons/heroicons/outline/x.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+              </button>
+            </div>
+          </td>
+        </tr>
+          
+        </tbody>
+        <!--end::Table body-->
+      </table>
+    </div>
+  </div>
+</div>
