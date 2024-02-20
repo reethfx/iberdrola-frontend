@@ -10,9 +10,10 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
-  // {
-  //   path: 'prices',
-  // },
+  {
+    path: 'homepage',
+    loadChildren: () => import('./modules/homepage/homepage.module').then((m) => m.HomepageModule),
+  },
   { path: '**', redirectTo: 'error/404' },
 ];
 
